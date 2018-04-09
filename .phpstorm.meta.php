@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2018-04-06 00:48:20.
+    * Generated on 2018-04-09 20:54:49.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -42,6 +42,7 @@ namespace PHPSTORM_META {
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
         'command.debugbar.clear' => \Barryvdh\Debugbar\Console\ClearCommand::class,
         'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
+        'App\Repositories\Contracts\UserRepositoryInterface' => \App\Repositories\Eloquent\UserRepository::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
@@ -181,6 +182,7 @@ namespace PHPSTORM_META {
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
         'command.debugbar.clear' => \Barryvdh\Debugbar\Console\ClearCommand::class,
         'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
+        'App\Repositories\Contracts\UserRepositoryInterface' => \App\Repositories\Eloquent\UserRepository::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
@@ -320,6 +322,7 @@ namespace PHPSTORM_META {
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
         'command.debugbar.clear' => \Barryvdh\Debugbar\Console\ClearCommand::class,
         'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
+        'App\Repositories\Contracts\UserRepositoryInterface' => \App\Repositories\Eloquent\UserRepository::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
@@ -459,6 +462,7 @@ namespace PHPSTORM_META {
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
         'command.debugbar.clear' => \Barryvdh\Debugbar\Console\ClearCommand::class,
         'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
+        'App\Repositories\Contracts\UserRepositoryInterface' => \App\Repositories\Eloquent\UserRepository::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
@@ -598,6 +602,7 @@ namespace PHPSTORM_META {
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
         'command.debugbar.clear' => \Barryvdh\Debugbar\Console\ClearCommand::class,
         'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
+        'App\Repositories\Contracts\UserRepositoryInterface' => \App\Repositories\Eloquent\UserRepository::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
@@ -737,6 +742,7 @@ namespace PHPSTORM_META {
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
         'command.debugbar.clear' => \Barryvdh\Debugbar\Console\ClearCommand::class,
         'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
+        'App\Repositories\Contracts\UserRepositoryInterface' => \App\Repositories\Eloquent\UserRepository::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
         'cache' => \Illuminate\Cache\CacheManager::class,
@@ -876,6 +882,7 @@ namespace PHPSTORM_META {
         'Barryvdh\Debugbar\LaravelDebugbar' => \Barryvdh\Debugbar\LaravelDebugbar::class,
         'command.debugbar.clear' => \Barryvdh\Debugbar\Console\ClearCommand::class,
         'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
+        'App\Repositories\Contracts\UserRepositoryInterface' => \App\Repositories\Eloquent\UserRepository::class,
         'blade.compiler' => \Illuminate\View\Compilers\BladeCompiler::class,
         'Illuminate\Console\Scheduling\Schedule' => \Illuminate\Console\Scheduling\Schedule::class,
         'cache' => \Illuminate\Cache\CacheManager::class,

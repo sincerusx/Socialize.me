@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.6.15 on 2018-04-06 00:48:17.
+ * Generated for Laravel 5.6.16 on 2018-04-09 20:54:47.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -1613,7 +1613,7 @@ namespace Illuminate\Support\Facades {
         /**
          * Get the currently authenticated user.
          *
-         * @return \App\User|null 
+         * @return \App\Entities\User|null 
          * @static 
          */ 
         public static function user()
@@ -1648,7 +1648,7 @@ namespace Illuminate\Support\Facades {
          * Log the given user ID into the application without sessions or cookies.
          *
          * @param mixed $id
-         * @return \App\User|false 
+         * @return \App\Entities\User|false 
          * @static 
          */ 
         public static function onceUsingId($id)
@@ -1712,7 +1712,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param mixed $id
          * @param bool $remember
-         * @return \App\User|false 
+         * @return \App\Entities\User|false 
          * @static 
          */ 
         public static function loginUsingId($id, $remember = false)
@@ -1774,7 +1774,7 @@ namespace Illuminate\Support\Facades {
         /**
          * Get the last user we attempted to authenticate.
          *
-         * @return \App\User 
+         * @return \App\Entities\User 
          * @static 
          */ 
         public static function getLastAttempted()
@@ -1876,7 +1876,7 @@ namespace Illuminate\Support\Facades {
         /**
          * Return the currently cached user.
          *
-         * @return \App\User|null 
+         * @return \App\Entities\User|null 
          * @static 
          */ 
         public static function getUser()
@@ -1922,7 +1922,7 @@ namespace Illuminate\Support\Facades {
         /**
          * Determine if the current user is authenticated.
          *
-         * @return \App\User 
+         * @return \App\Entities\User 
          * @throws \Illuminate\Auth\AuthenticationException
          * @static 
          */ 
@@ -1994,6 +1994,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param object $mixin
          * @return void 
+         * @throws \ReflectionException
          * @static 
          */ 
         public static function mixin($mixin)
@@ -2314,7 +2315,7 @@ namespace Illuminate\Support\Facades {
         /**
          * Get a driver instance.
          *
-         * @param string $name
+         * @param string|null $name
          * @return mixed 
          * @static 
          */ 
@@ -2468,7 +2469,7 @@ namespace Illuminate\Support\Facades {
         /**
          * Get a cache driver instance.
          *
-         * @param string $driver
+         * @param string|null $driver
          * @return mixed 
          * @static 
          */ 
@@ -2598,7 +2599,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param string $key
          * @param mixed $value
-         * @param \DateTimeInterface|\DateInterval|float|int $minutes
+         * @param \DateTimeInterface|\DateInterval|float|int|null $minutes
          * @return void 
          * @static 
          */ 
@@ -2927,6 +2928,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param object $mixin
          * @return void 
+         * @throws \ReflectionException
          * @static 
          */ 
         public static function mixin($mixin)
@@ -4047,6 +4049,18 @@ namespace Illuminate\Support\Facades {
         }
         
         /**
+         * Unset the event dispatcher for this connection.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function unsetEventDispatcher()
+        {
+            //Method inherited from \Illuminate\Database\Connection            
+            \Illuminate\Database\MySqlConnection::unsetEventDispatcher();
+        }
+        
+        /**
          * Determine if the connection in a "dry run".
          *
          * @return bool 
@@ -4919,6 +4933,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param object $mixin
          * @return void 
+         * @throws \ReflectionException
          * @static 
          */ 
         public static function mixin($mixin)
@@ -4973,7 +4988,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param string $name
          * @param string $class
-         * @param array $abilities
+         * @param array|null $abilities
          * @return $this 
          * @static 
          */ 
@@ -5575,6 +5590,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param object $mixin
          * @return void 
+         * @throws \ReflectionException
          * @static 
          */ 
         public static function mixin($mixin)
@@ -6067,6 +6083,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param object $mixin
          * @return void 
+         * @throws \ReflectionException
          * @static 
          */ 
         public static function mixin($mixin)
@@ -6209,7 +6226,7 @@ namespace Illuminate\Support\Facades {
         /**
          * Attempt to get the broker from the local cache.
          *
-         * @param string $name
+         * @param string|null $name
          * @return \Illuminate\Contracts\Auth\PasswordBroker 
          * @static 
          */ 
@@ -6765,6 +6782,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param object $mixin
          * @return void 
+         * @throws \ReflectionException
          * @static 
          */ 
         public static function mixin($mixin)
@@ -8692,6 +8710,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param object $mixin
          * @return void 
+         * @throws \ReflectionException
          * @static 
          */ 
         public static function mixin($mixin)
@@ -8945,6 +8964,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param object $mixin
          * @return void 
+         * @throws \ReflectionException
          * @static 
          */ 
         public static function mixin($mixin)
@@ -9715,6 +9735,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param object $mixin
          * @return void 
+         * @throws \ReflectionException
          * @static 
          */ 
         public static function mixin($mixin)
@@ -11502,6 +11523,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param object $mixin
          * @return void 
+         * @throws \ReflectionException
          * @static 
          */ 
         public static function mixin($mixin)
@@ -13531,6 +13553,7 @@ namespace Collective\Html {
          *
          * @param object $mixin
          * @return void 
+         * @throws \ReflectionException
          * @static 
          */ 
         public static function mixin($mixin)
@@ -13926,6 +13949,7 @@ namespace Collective\Html {
          *
          * @param object $mixin
          * @return void 
+         * @throws \ReflectionException
          * @static 
          */ 
         public static function mixin($mixin)
@@ -16166,6 +16190,7 @@ namespace  {
              *
              * @param object $mixin
              * @return void 
+             * @throws \ReflectionException
              * @static 
              */ 
             public static function mixin($mixin)

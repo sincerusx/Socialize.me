@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\ResetsPasswords;
+use App\Services\ResetCredentials;
+use Illuminate\Http\Request;
 
 class ResetPasswordController extends Controller
 {
@@ -18,14 +19,12 @@ class ResetPasswordController extends Controller
     |
     */
 
-    use ResetsPasswords;
-
     /**
      * Where to redirect users after resetting their password.
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    public $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -35,5 +34,35 @@ class ResetPasswordController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+    }
+
+    /**
+     * Display the password reset view for the given token.
+     *
+     * If no token is present, display the link request form.
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @param  string|null              $token
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function showResetForm(Request $request, $token = null)
+    {
+        return view('auth.passwords.reset')->with(
+                ['token' => $token, 'email' => $request->only('email')]
+        );
+    }
+
+    /**
+     * Reset the given user's password.
+     *
+     * @param \App\Services\ResetCredentials $resetCredentials
+     * @param \Illuminate\Http\Request       $request
+     *
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\JsonResponse
+     */
+    public function reset(ResetCredentials $resetCredentials, Request $request)
+    {
+        return $resetCredentials->reset($request);
     }
 }

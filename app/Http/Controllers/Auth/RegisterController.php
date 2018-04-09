@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Models\User;
+use App\Entities\User;
 use App\Http\Controllers\Controller;
+use App\Services\Registration;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -21,14 +23,14 @@ class RegisterController extends Controller
     |
     */
 
-    use RegistersUsers;
+    //    use RegistersUsers;
 
     /**
      * Where to redirect users after registration.
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    public $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -41,32 +43,41 @@ class RegisterController extends Controller
     }
 
     /**
-     * Get a validator for an incoming registration request.
+     * Show the application registration form.
      *
-     * @param  array  $data
-     * @return \Illuminate\Contracts\Validation\Validator
+     * @return \Illuminate\Http\Response
      */
-    protected function validator(array $data)
+    public function showRegistrationForm()
     {
-        return Validator::make($data, [
-            'username' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
-        ]);
+        return view('auth.register');
+    }
+
+    /**
+     * Handle a registration request for the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param \App\Services\Registration $service
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function register(Request $request, Registration $service)
+    {
+        return $service->tryRegister($request);
     }
 
     /**
      * Create a new user instance after a valid registration.
      *
-     * @param  array  $data
-     * @return \App\Models\User
+     * @param  array $data
+     *
+     * @return \App\Entities\User
      */
     protected function create(array $data)
     {
         return User::create([
-            'username' => $data['username'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+                'username' => $data['username'],
+                'email'    => $data['email'],
+                'password' => Hash::make($data['password']),
         ]);
     }
 }
